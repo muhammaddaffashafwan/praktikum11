@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            margin: 50px 350px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box{
+            justify-content: center;
+            display: flex;
+            width: 500px;
+            height: 300px;
+        }
+
+    </style>
+
+   <script>
+    
+    function imagepicker() {
+            const list_image = ["bola.png", "kapal.png", "kereta.png", "motor.png", "pesawat.png", "sepeda.png"]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "bola") {
+                let select = list_image[0];
+                document.getElementById("gambar").src = `img/${select}`
+                alert("Ini gambar bola.png")
+            }
+            
+
+            if(pilihan.value == "kapal") {
+                let select = list_image[1];
+                document.getElementById("gambar").src = `img/${select}`
+                alert("Ini gambar kapal.png")
+            }
+
+            if(pilihan.value == "kereta") {
+                let select = list_image[2];
+                document.getElementById("gambar").src = `img/${select}`
+                alert("Ini gambar kereta.png")
+            }
+
+            if(pilihan.value == "motor") {
+                let select = list_image[3];
+                document.getElementById("gambar").src = `img/${select}`
+                alert("Ini gambar motor.png")
+            }
+
+            if(pilihan.value == "pesawat") {
+                let select = list_image[4];
+                document.getElementById("gambar").src = `img/${select}`
+                alert("Ini gambar pesawat.png")
+            }
+
+            if(pilihan.value == "sepeda") {
+                let select = list_image[5];
+                document.getElementById("gambar").src = `img/${select}`
+                alert("Ini gambar sepeda.png")
+            }
+        }
+   </script>
+</head>
+<body>
+    <select id="option" onchange="imagepicker()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="bola">Bola</option>
+        <option value="mobil">Mobil</option>
+        <option value="motor">Motor</option>
+        <option value="pesawat">Pesawat</option>
+        <option value="kapal">Kapal</option>
+        <option value="kereta">Kereta</option>
+        <option value="sepeda">Sepeda</option>
+    </select>
+
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="gambar" >
+        </div>
+    </div>
+</body>
+</html>
